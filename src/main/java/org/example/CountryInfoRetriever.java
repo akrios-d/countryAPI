@@ -45,7 +45,7 @@ public class CountryInfoRetriever {
     public Countries retrieveCountriesData() {
         try {
             // Filter in URL that way, saving memory for the things going to fetch/store
-            URL url = new URL("https://restcountries.com/v3.1/all?fields=name,population,borders,region,cioc,area");
+            URL url = new URL("https://restcountries.com/v3.1/region/africa?fields=name,population,borders,region,cioc,area");
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
 
@@ -60,6 +60,8 @@ public class CountryInfoRetriever {
                 }
                 reader.close();
                 response.append("}");
+
+                System.out.println(response);
 
                 return new Gson().fromJson(response.toString(), Countries.class);
             } else {

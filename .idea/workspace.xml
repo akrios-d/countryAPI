@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7acc96fc-98e5-40cd-9261-a7ee3144c58f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/ConstantsUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CountryInfoRetriever.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/CountryInfoRetriever.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/CountryInfoRetrieverTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/CountryInfoRetrieverTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +26,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -51,9 +57,9 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "C:/countryAPI",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.3275862",
     "settings.editor.selected.configurable": "MavenSettings"
   }
 }]]></component>
@@ -65,7 +71,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.CountryInfoRetrieverTest">
     <configuration name="CountryInfoRetriever" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.CountryInfoRetriever" />
       <module name="CountryAPI" />
@@ -79,9 +85,76 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CountryInfoRetrieverTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CountryAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.CountryInfoRetrieverTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CountryInfoRetrieverTest.findAsianCountryWithMostBorderingDifferentRegion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CountryAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.CountryInfoRetrieverTest" />
+      <option name="METHOD_NAME" value="findAsianCountryWithMostBorderingDifferentRegion" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CountryInfoRetrieverTest.findCountryByCode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CountryAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.CountryInfoRetrieverTest" />
+      <option name="METHOD_NAME" value="findCountryByCode" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CountryInfoRetrieverTest.sortCountriesByPopulationDensity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CountryAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.CountryInfoRetrieverTest" />
+      <option name="METHOD_NAME" value="sortCountriesByPopulationDensity" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CountryInfoRetrieverTest" />
+        <item itemvalue="JUnit.CountryInfoRetrieverTest.findAsianCountryWithMostBorderingDifferentRegion" />
         <item itemvalue="Application.CountryInfoRetriever" />
+        <item itemvalue="JUnit.CountryInfoRetrieverTest.sortCountriesByPopulationDensity" />
+        <item itemvalue="JUnit.CountryInfoRetrieverTest.findCountryByCode" />
       </list>
     </recent_temporary>
   </component>
@@ -98,5 +171,16 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/CountryInfoRetriever.java</url>
+          <line>109</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
