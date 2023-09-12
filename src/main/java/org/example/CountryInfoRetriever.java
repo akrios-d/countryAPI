@@ -117,12 +117,10 @@ public class CountryInfoRetriever {
     // Find a country by its cioc
     public Country findCountryByCode(List<Country> countryList, String countryCode) {
 
-        for (Country country: countryList) {
-            if (country.getCioc().equalsIgnoreCase(countryCode)) {
-                return country;
-            }
-        }
-        return null;
+        return countryList.stream()
+                .filter(country -> country.getCioc().equalsIgnoreCase(countryCode))
+                .findAny()
+                .orElse(null);
     }
 }
 
