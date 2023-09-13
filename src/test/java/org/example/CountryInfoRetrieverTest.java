@@ -2,6 +2,7 @@ package org.example;
 
 import com.google.gson.Gson;
 import org.assertj.core.api.Assertions;
+import org.example.controller.CountryInfoService;
 import org.example.model.Countries;
 import org.example.model.Country;
 import org.junit.Before;
@@ -21,18 +22,18 @@ import static junit.framework.TestCase.assertTrue;
 public class CountryInfoRetrieverTest {
 
     Countries countries;
-    CountryInfoRetriever countryInfoRetriever;
+    CountryInfoService countryInfoService;
 
     @Before
     public void setup() {
-        countryInfoRetriever = new CountryInfoRetriever();
+        countryInfoService = new CountryInfoService();
         countries = new Gson().fromJson(ConstantsUtil.countryList, Countries.class);
     }
 
     @Test
     public void sortCountriesByPopulationDensity() {
 
-        List<Country> countryList = countryInfoRetriever.sortCountriesByPopulationDensity(countries.getCountryList());
+        List<Country> countryList = countryInfoService.sortCountriesByPopulationDensity(countries.getCountryList());
 
         Country previous = countryList.get(0);
         countryList.remove(0);
@@ -54,7 +55,7 @@ public class CountryInfoRetrieverTest {
 
         countries.getCountryList().addAll(countriesAfrica.getCountryList());
 
-        Country response = countryInfoRetriever.findAsianCountryWithMostBorderingDifferentRegion(countries.getCountryList());
+        Country response = countryInfoService.findAsianCountryWithMostBorderingDifferentRegion(countries.getCountryList());
 
         Assertions.assertThat(response.getBorders()).hasSize(3);
         Assertions.assertThat(response.getName().getCommon()).isEqualTo("Palestine");
@@ -63,7 +64,7 @@ public class CountryInfoRetrieverTest {
     @Test
     public void findCountryByCode() {
 
-        Country response = countryInfoRetriever.findCountryByCode(countries.getCountryList(),"KSA");
+        Country response = countryInfoService.findCountryByCode(countries.getCountryList(),"KSA");
 
         Assertions.assertThat(response.getName().getCommon()).isEqualTo("Saudi Arabia");
         Assertions.assertThat(response.getName().getOfficial()).isEqualTo("Kingdom of Saudi Arabia");
@@ -75,7 +76,7 @@ public class CountryInfoRetrieverTest {
     @Test
     public void findCountryByCodeFailWithNull() {
 
-        Country response = countryInfoRetriever.findCountryByCode(countries.getCountryList(),"PAR");
+        Country response = countryInfoService.findCountryByCode(countries.getCountryList(),"PAR");
 
         Assertions.assertThat(response).isNull();
     }
