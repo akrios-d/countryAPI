@@ -45,21 +45,21 @@ public class CountryInfoService {
     }
 
     // Find the Asian country with the most bordering countries from a different region
-    public Country findAsianCountryWithMostBorderingDifferentRegion(List<Country> countryList) {
+    public Country findCountryWithMostBorderingDifferentRegion(List<Country> countryList, String region) {
 
         Country asianCountryWithMostBorderingDifferentRegion = null;
         int maxBorderingDifferentRegionCount = 0;
 
         for (Country country: countryList) {
 
-            if (country.getRegion().equalsIgnoreCase("Asia")) {
+            if (country.getRegion().equalsIgnoreCase(region)) {
                 List<String> borders = country.getBorders();
                 int borderingDifferentRegionCount = 0;
 
                 for (String borderingCountryCode: borders) {
                     Country borderingCountry = findCountryByCode(countryList, borderingCountryCode);
 
-                    if (borderingCountry != null && !borderingCountry.getRegion().equalsIgnoreCase("Asia")) {
+                    if (borderingCountry != null && !borderingCountry.getRegion().equalsIgnoreCase(region)) {
                         borderingDifferentRegionCount++;
                     }
                 }

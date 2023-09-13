@@ -1,15 +1,9 @@
 package org.example;
 
-import com.google.gson.Gson;
 import org.example.controller.CountryInfoService;
 import org.example.model.Countries;
 import org.example.model.Country;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.List;
 
 public class CountryInfoRetriever {
@@ -32,7 +26,7 @@ public class CountryInfoRetriever {
             }
 
             // Task 2: Find the Asian country with the most bordering countries from a different region
-            Country asianCountry = countryInfoService.findAsianCountryWithMostBorderingDifferentRegion(countries.getCountryList());
+            Country asianCountry = countryInfoService.findCountryWithMostBorderingDifferentRegion(countries.getCountryList(),"Asia");
             System.out.println("\nTask 2: Asian country with the most bordering countries from a different region:");
             if (asianCountry != null) {
                 System.out.println("Country Name: " + asianCountry.getName().getCommon());

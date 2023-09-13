@@ -55,7 +55,7 @@ public class CountryInfoRetrieverTest {
 
         countries.getCountryList().addAll(countriesAfrica.getCountryList());
 
-        Country response = countryInfoService.findAsianCountryWithMostBorderingDifferentRegion(countries.getCountryList());
+        Country response = countryInfoService.findCountryWithMostBorderingDifferentRegion(countries.getCountryList(),"Asia");
 
         Assertions.assertThat(response.getBorders()).hasSize(3);
         Assertions.assertThat(response.getName().getCommon()).isEqualTo("Palestine");
