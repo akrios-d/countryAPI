@@ -44,7 +44,7 @@ public class CountryInfoService {
         return null;
     }
 
-    // Find the Asian country with the most bordering countries from a different region
+    // Find the country with the most bordering countries from a different region
     public Country findCountryWithMostBorderingDifferentRegion(List<Country> countryList, String region) {
 
         Country asianCountryWithMostBorderingDifferentRegion = null;
