@@ -47,7 +47,7 @@ public class CountryInfoService {
     // Find the country with the most bordering countries from a different region
     public Country findCountryWithMostBorderingDifferentRegion(List<Country> countryList, String region) {
 
-        Country asianCountryWithMostBorderingDifferentRegion = null;
+        Country countryWithMostBorderingDifferentRegion = null;
         int maxBorderingDifferentRegionCount = 0;
 
         for (Country country: countryList) {
@@ -66,12 +66,12 @@ public class CountryInfoService {
 
                 if (borderingDifferentRegionCount > maxBorderingDifferentRegionCount) {
                     maxBorderingDifferentRegionCount = borderingDifferentRegionCount;
-                    asianCountryWithMostBorderingDifferentRegion = country;
+                    countryWithMostBorderingDifferentRegion = country;
                 }
             }
         }
 
-        return asianCountryWithMostBorderingDifferentRegion;
+        return countryWithMostBorderingDifferentRegion;
     }
 
     // Find a country by its cioc
